@@ -19,3 +19,11 @@ export default {
    <span class="information-display__value">{{ information.value }}</span>
 </div>
 </template>
+
+<style lang="scss">
+.information-display {
+   &__label {
+      font-weight: 700;
+   }
+}
+</style>
