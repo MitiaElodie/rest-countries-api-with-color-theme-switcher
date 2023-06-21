@@ -62,5 +62,9 @@ export default {
 
     font-weight: 600;
   }
+
+  &__content {
+    margin: 30px;
+  }
 }
 </style>
