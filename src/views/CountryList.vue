@@ -1,6 +1,10 @@
 <script>
+import { mapState } from 'vuex'
 export default {
    name: 'CountryList',
+   computed: {
+      ...mapState(['countryList'])
+   }
 }
 </script>
 
