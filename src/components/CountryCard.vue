@@ -60,7 +60,9 @@ export default {
   }
 
   &__flag {
+    display: block;
     width: 100%;
+    height: 100%;
   }
 
   &__country-information {
@@ -68,7 +70,7 @@ export default {
   }
 
   &__name {
-    margin: 15px 0;
+    margin-bottom: 15px;
     font-size: 1.3em;
   }
 }

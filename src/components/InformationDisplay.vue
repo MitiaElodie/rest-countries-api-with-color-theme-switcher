@@ -25,5 +25,9 @@ export default {
    &__label {
       font-weight: 700;
    }
+
+   &__value {
+      margin-left: 5px;
+   }
 }
 </style>
