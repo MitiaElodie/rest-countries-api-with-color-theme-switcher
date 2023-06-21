@@ -19,6 +19,15 @@ export default {
       v-for="(item, index) in informationList"
       :information="item"
       :key="`informationDisplay${ index }`"
+      class="information-list__item"
    />
 </div>
 </template>
+
+<style lang="scss">
+.information-list {
+   &__item {
+      margin-bottom: 5px;
+   }
+}
+</style>
