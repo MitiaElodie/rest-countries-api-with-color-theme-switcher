@@ -20,7 +20,7 @@ export default {
       </button>
     </div>
     <div class="app__content">
-
+      <router-view/>
     </div>
   </div>
 </template>
