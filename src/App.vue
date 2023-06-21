@@ -1,4 +1,6 @@
 <script>
+import { mapActions } from 'vuex'
+
 import countryList from '@/data/data.json'
 export default {
   name: 'App',
@@ -7,7 +9,15 @@ export default {
     return {
       countryList: countryList
     }
-  }
+  },
+
+  created() {
+    return this.setCountryList()
+  },
+
+  methods: {
+    ...mapActions(['setCountryList'])
+  },
 }
 </script>
 

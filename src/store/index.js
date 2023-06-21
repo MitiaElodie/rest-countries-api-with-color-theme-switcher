@@ -12,7 +12,7 @@ export default createStore({
   },
   actions: {
     setCountryList({ commit }) {
-      commit('setToggles', countryList)
+      commit('setCountryList', countryList)
    },
 
   },
