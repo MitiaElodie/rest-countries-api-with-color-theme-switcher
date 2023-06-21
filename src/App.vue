@@ -1,11 +1,7 @@
 <script>
-import CountryCard from '@/components/CountryCard.vue'
 import countryList from '@/data/data.json'
 export default {
   name: 'App',
-  components: {
-    CountryCard
-  },
 
   data() {
     return {
@@ -16,9 +12,17 @@ export default {
 </script>
 
 <template>
-  <CountryCard
-    :country="countryList[10]"
-  />
+  <div class="app">
+    <div class="app__header">
+      <h1 class="app__title">Where in the world?</h1>
+      <button class="app__dark-mode-button">
+        <span class="app__dark-mode-label">Dark Mode</span>
+      </button>
+    </div>
+    <div class="app__content">
+
+    </div>
+  </div>
 </template>
 
 
@@ -26,9 +30,27 @@ export default {
 * {
   padding: 0;
   margin: 0;
+  font-family: 'Nunito Sans';
 }
 
-:root {
-  font-family: 'Nunito Sans';
+.app {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+    padding: 25px;
+  }
+
+  &__title {
+    font-size: 1em;
+  }
+
+  &__dark-mode-button {
+    background-color: inherit;
+    border: none;
+
+    font-weight: 600;
+  }
 }
 </style>
