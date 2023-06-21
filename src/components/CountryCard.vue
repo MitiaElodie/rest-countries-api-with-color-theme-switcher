@@ -51,12 +51,13 @@ export default {
 
 <style lang="scss">
 .country-card {
-  max-width: 350px;
+  width: 350px;
   border-radius: 5px;
   overflow: hidden;
 
   &__flag-container {
     width: 100%;
+    height: 200px;
   }
 
   &__flag {
