@@ -55,6 +55,8 @@ export default {
   border-radius: 5px;
   overflow: hidden;
 
+  background-color: white;
+
   &__flag-container {
     width: 100%;
     height: 200px;
