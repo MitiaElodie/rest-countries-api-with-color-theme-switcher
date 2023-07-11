@@ -2,15 +2,23 @@
 import { mapState } from 'vuex'
 
 import SearchBar from '@/components/SearchBar.vue';
+import FilterRegion from '@/components/FilterRegion.vue';
 import CountryCardList from '@/components/CountryCardList.vue';
 
 export default {
    name: 'CountryList',
-   components: { SearchBar, CountryCardList },
+
+   components: {
+      SearchBar,
+      CountryCardList,
+      FilterRegion
+   },
+
    data() {
       return {
          localCountryList: [],
-         isLoading: false,
+         searchValue: '',
+         filterValue: '',
       }
    },
 
@@ -23,9 +31,23 @@ export default {
    },
 
    methods: {
+      stringContains(stringValue, searchValue) {
+         return stringValue.toLowerCase().includes(searchValue.toLowerCase())
+      },
+
+      updateCountryList() {
+         this.localCountryList = this.countryList.filter((country) => this.stringContains(country.name, this.searchValue) && this.stringContains(country.region, this.filterValue))
+      },
+
       onSearchChange(searchValue) {
-         this.localCountryList = this.countryList.filter((country) => country.name.toLowerCase().includes(searchValue.toLowerCase()))
-      }
+         this.searchValue = searchValue
+         this.updateCountryList()
+      },
+
+      onFilterChange(filterValue) {
+         this.filterValue = filterValue
+         this.updateCountryList()
+      },
    }
 }
 </script>
@@ -36,6 +58,10 @@ export default {
          <SearchBar   
             class="country-list__search-bar"
             @search-change="onSearchChange"
+         />
+         <FilterRegion
+            class="country-list__filter-region"
+            @filter-change="onFilterChange"
          />
       </div>
       <CountryCardList
@@ -52,6 +78,9 @@ export default {
 
 .country-list {
    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       margin-bottom: 10px;
    }
 }
