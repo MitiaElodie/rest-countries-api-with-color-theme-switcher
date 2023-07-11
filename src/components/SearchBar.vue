@@ -11,6 +11,7 @@ export default {
 
 <template>
    <div class="search-bar">
+      <i class="fa fa-search"></i>
       <input
          v-model="searchValue"
          class="search-bar__input"
