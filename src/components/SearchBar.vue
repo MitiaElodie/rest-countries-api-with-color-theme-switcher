@@ -22,6 +22,8 @@ export default {
 
 <style lang="scss">
 .search-bar {
+   display: flex;
+
    min-width: 200px;
    max-width: 400px;
    border-radius: 5px;
@@ -31,8 +33,10 @@ export default {
 
 
    &__input {
+      padding: 10px;
+      padding-left: 0; // remove the padding left because there is already a padding from the icon
       border: none;
-      height: 100%;
+      width: 100%;
 
       &:focus {
          outline: none; // to remove the border when focused
