@@ -5,7 +5,16 @@ export default {
       return {
          searchValue: ''
       }
-   }
+   },
+
+   emits: ['search-change'],
+   
+   watch: {
+      searchValue() {
+         this.$emit('search-change', this.searchValue)
+      }
+   },
+
 }
 </script>
 
