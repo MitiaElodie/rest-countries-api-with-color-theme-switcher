@@ -12,11 +12,11 @@ export default {
   },
 
   created() {
-    return this.setCountryList()
+    return this.setCountryList().then(() => this.setRegionList())
   },
 
   methods: {
-    ...mapActions(['setCountryList'])
+    ...mapActions(['setCountryList', 'setRegionList'])
   },
 }
 </script>
