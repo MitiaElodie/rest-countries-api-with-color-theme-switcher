@@ -24,3 +24,15 @@ export default {
       />
    </div>
 </template>
+
+<style lang="scss">
+.app__content {
+   background-color: hsl(0, 0%, 98%);
+}
+
+.country-list {
+   &__header {
+      margin-bottom: 10px;
+   }
+}
+</style>

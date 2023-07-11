@@ -64,7 +64,7 @@ export default {
   }
 
   &__content {
-    margin: 30px;
+    padding: 30px;
   }
 }
 </style>
