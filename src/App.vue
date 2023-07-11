@@ -26,6 +26,7 @@ export default {
     <div class="app__header">
       <h1 class="app__title">Where in the world?</h1>
       <button class="app__dark-mode-button">
+        <i class="app__dark-mode-icon fa fa-moon" />
         <span class="app__dark-mode-label">Dark Mode</span>
       </button>
     </div>
@@ -59,8 +60,13 @@ export default {
   &__dark-mode-button {
     background-color: inherit;
     border: none;
+    cursor: pointer;
 
     font-weight: 600;
+  }
+
+  &__dark-mode-icon {
+    padding: 5px;
   }
 
   &__content {
