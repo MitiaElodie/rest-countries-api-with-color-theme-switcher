@@ -23,7 +23,7 @@ export default {
 <style lang="scss">
 .information-display {
    &__label {
-      font-weight: 700;
+      font-weight: 600;
    }
 
    &__value {

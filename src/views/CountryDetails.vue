@@ -91,12 +91,10 @@ export default {
       </button>
    </div>
    <div class="country-details__country-information">
-      <div class="country-details__flag-container">
          <img
             class="country-details__flag"
             :src="country.flags.png"
          />
-      </div>
       <div class="country-details__information-container">
          <h3 class="country-details__name">{{ country.name }}</h3>
          <div class="country-details__information">
@@ -129,14 +127,21 @@ export default {
 
 <style lang="scss">
 .country-details {
+   font-size: 14px;
+
    &__country-information,
    &__information {
       display: flex;
       flex-wrap: wrap;
    }
 
+   &__information {
+      gap: 50px;
+      justify-content: space-between;
+   }
+
    &__border-label {
-      font-weight: 700;
+      font-weight: 600;
    }
 
    &__border-label,
@@ -149,13 +154,17 @@ export default {
       flex-wrap: wrap;
       margin-left: 5px;
 
-      gap: 5px;
+      gap: 10px;
    }
 
    &__border {
-      border-radius: 5px;;
-      box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-      padding: 5px 10px;
+      border-radius: 2px;
+      box-shadow: 0px 0px 5px 1px hsl(0, 0%, 85%);
+      padding: 1px 20px;
+   }
+
+   &__border-countries-container {
+      margin-top: 50px;
    }
 
    &__no-borders {
@@ -168,11 +177,12 @@ export default {
 
    &__back-button {
       min-width: 95px;
-      padding: 7px 20px;
+      padding: 7px 30px;
       border: none;
+      border-radius: 5px;
       cursor: pointer;
 
-      box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.2);
+      box-shadow: 0px 0px 5px 1px hsl(0, 0%, 85%);
       background-color: white;
    }
 
@@ -181,7 +191,16 @@ export default {
    }
 
    &__flag {
-      box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.2);
+      display: block; // to remove the extra space at the bottom
+      width: 475px;
+      min-width: 250px;
+      box-shadow: 0px 0px 5px 1px hsl(0, 0%, 85%);
+   }
+
+   &__name {
+      font-size: 1.5em;
+      margin-bottom: 25px;
+      font-weight: 800;
    }
 }
 </style>

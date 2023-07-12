@@ -27,7 +27,7 @@ export default {
 <style lang="scss">
 .information-list {
    &__item {
-      margin-bottom: 5px;
+      margin-bottom: 10px;
    }
 }
 </style>

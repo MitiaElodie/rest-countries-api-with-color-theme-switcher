@@ -77,6 +77,7 @@ export default {
 }
 
 .country-list {
+   font-size: 14px;
    &__header {
       display: flex;
       align-items: center;
