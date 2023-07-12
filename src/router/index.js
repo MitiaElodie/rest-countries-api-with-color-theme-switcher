@@ -11,6 +11,11 @@ const routes = [
    name: 'CountryDetails',
    component: () => import(/* webpackChunkName: 'CountryDetails' */'@/views/CountryDetails.vue'),
   },
+  {
+    path: '/:patchMatch(.*)*',
+    name: 'CountryList_InvalidRoute',
+    redirect: { name: 'CountryList'}
+  },
 ]
 
 const router = createRouter({
