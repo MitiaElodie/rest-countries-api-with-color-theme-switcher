@@ -31,7 +31,7 @@ export default {
         <h1 class="app__title">Where in the world?</h1>
       </router-link>
       <button class="app__dark-mode-button">
-        <i class="app__dark-mode-icon fa fa-moon" />
+        <i class="app__dark-mode-icon fa fa-moon-o" />
         <span class="app__dark-mode-label">Dark Mode</span>
       </button>
     </div>
