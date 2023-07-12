@@ -32,14 +32,14 @@ export default {
 <style lang="scss">
 .search-bar {
    display: flex;
+   overflow: hidden;
 
-   min-width: 200px;
-   max-width: 400px;
+   width: 350px;
    border-radius: 5px;
 
    color: hsl(0, 0%, 52%);
    background-color: white;
-
+   box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.2);
 
    &__input {
       padding: 10px;

@@ -56,6 +56,7 @@ export default {
   overflow: hidden;
 
   background-color: white;
+  box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.2);
 
   &__flag-container {
     width: 100%;

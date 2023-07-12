@@ -59,6 +59,7 @@ export default {
 
    &__toggle-button {
       width: 150px;
+      box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.2);
    }
 
    &__dropdown-content {
@@ -68,6 +69,7 @@ export default {
       min-width: 100%;
 
       background-color: white;
+      box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.2);
    }
 
    &__region {

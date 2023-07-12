@@ -179,5 +179,9 @@ export default {
    &__back-container {
       margin-bottom: 50px;
    }
+
+   &__flag {
+      box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.2);
+   }
 }
 </style>
