@@ -112,11 +112,14 @@ export default {
          <div class="country-details__border-countries-container">
             <span class="country-details__border-label">Border countries:</span>
             <div class="country-details__border-list">
-               <div
-                  v-for="(border, index) in borderCountryNames"
-                  :key="`border-${index}`"
-                  class="country-details__border"
-               >{{ border }}</div>
+               <template v-if="borderCountryNames.length > 0">
+                  <div
+                     v-for="(border, index) in borderCountryNames"
+                     :key="`border-${index}`"
+                     class="country-details__border"
+                  >{{ border }}</div>
+               </template>
+               <template v-else><span class="country-details__no-borders">None</span></template>
             </div>
          </div>
       </div>
@@ -155,6 +158,10 @@ export default {
       padding: 5px 10px;
    }
 
+   &__no-borders {
+      font-style: italic;
+   }
+
    &__arrow-left-icon {
       margin-right: 10px;
    }
@@ -163,6 +170,7 @@ export default {
       min-width: 95px;
       padding: 7px 20px;
       border: none;
+      cursor: pointer;
 
       box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.2);
       background-color: white;
