@@ -1,15 +1,19 @@
 <script>
+import { mapState } from 'vuex'
+
 import InformationList from '@/components/InformationList.vue';
 export default {
    name: 'CountryDetails',
+
    components: { InformationList },
-   props: {
-      country: {
-         type: Object,
-         default: () => {}
-      }
+
+   data() {
+      return { country: {}}
    },
+
    computed: {
+      ...mapState(['countryList']),
+
       geographicalInformation() {
          return [
             {
@@ -51,6 +55,12 @@ export default {
             },
          ]
       }
+   },
+
+   created() {
+      const countryId = this.$route.params.countryId
+
+      this.country = this.countryList.filter((country) => country.id == countryId)[0]
    }
 }
 </script>
