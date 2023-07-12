@@ -39,10 +39,10 @@ export default {
 
    color: hsl(0, 0%, 52%);
    background-color: white;
-   box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.2);
+   box-shadow: 0px 0px 5px 1px hsl(0, 0%, 85%);
 
    &__input {
-      padding: 10px;
+      padding: 15px;
       padding-left: 0; // remove the padding left because there is already a padding from the icon
       border: none;
       width: 100%;
@@ -53,7 +53,7 @@ export default {
    }
 
    &__search-icon {
-      padding: 10px 15px;
+      padding: 15px 20px;
    }
 }
 </style>

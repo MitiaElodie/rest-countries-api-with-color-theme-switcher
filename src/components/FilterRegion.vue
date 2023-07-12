@@ -49,7 +49,7 @@ export default {
 
    &__toggle-button,
    &__region {
-      padding: 10px;
+      padding: 15px;
       border-radius: 5px;
       border: none;
       cursor: pointer;
@@ -59,7 +59,7 @@ export default {
 
    &__toggle-button {
       width: 150px;
-      box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.2);
+      box-shadow: 0px 0px 5px 1px hsl(0, 0%, 85%);
    }
 
    &__dropdown-content {
@@ -69,7 +69,7 @@ export default {
       min-width: 100%;
 
       background-color: white;
-      box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.2);
+      box-shadow: 0px 0px 5px 1px hsl(0, 0%, 85%);
    }
 
    &__region {
