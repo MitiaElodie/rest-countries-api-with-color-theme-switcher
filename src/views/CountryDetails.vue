@@ -76,12 +76,13 @@ export default {
 <template>
 <div class="country-details">
    <div class="country-details__back-container">
-      <div
+      <button
          class="country-details__back-button"
          @click="$router.back()"
       >
+         <i class="fa fa-arrow-left country-details__arrow-left-icon" />
          <span class="country-details__back-label">Back</span>
-      </div>
+      </button>
    </div>
    <div class="country-details__country-information">
       <div class="country-details__flag-container">
@@ -146,6 +147,23 @@ export default {
       border-radius: 5px;;
       box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
       padding: 5px 10px;
+   }
+
+   &__arrow-left-icon {
+      margin-right: 10px;
+   }
+
+   &__back-button {
+      min-width: 95px;
+      padding: 7px 20px;
+      border: none;
+
+      box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.2);
+      background-color: white;
+   }
+
+   &__back-container {
+      margin-bottom: 50px;
    }
 }
 </style>
