@@ -54,13 +54,21 @@ export default {
                value: this.country.languages[0].name,
             },
          ]
-      }
+      },
+
+      borderCountryNames() {
+         return this.country.borders.map((border) => this.getCountryByAlpha3Code(border).name)
+      },
    },
 
    created() {
-      const countryId = this.$route.params.countryId
+      this.country = this.getCountryByAlpha3Code(this.$route.params.countryId)
+   },
 
-      this.country = this.countryList.filter((country) => country.id == countryId)[0]
+   methods: {
+      getCountryByAlpha3Code(code) {
+         return this.countryList.filter((country) => country.alpha3Code == code)[0]
+      }
    }
 }
 </script>
@@ -91,6 +99,16 @@ export default {
                :information-list="culturalInformation"
             />
          </div>
+         <div class="country-details__border-countries-container">
+            <span class="country-details__border-label">Border countries:</span>
+            <div class="country-details__border-list">
+               <div
+                  v-for="(border, index) in borderCountryNames"
+                  :key="`border-${index}`"
+                  class="country-details__border"
+               >{{ border }}</div>
+            </div>
+         </div>
       </div>
    </div>
 </div>
@@ -102,6 +120,29 @@ export default {
    &__information {
       display: flex;
       flex-wrap: wrap;
+   }
+
+   &__border-label {
+      font-weight: 700;
+   }
+
+   &__border-label,
+   &__border {
+      display: inline-block;
+   }
+
+   &__border-list {
+      display: inline-flex;
+      flex-wrap: wrap;
+      margin-left: 5px;
+
+      gap: 5px;
+   }
+
+   &__border {
+      border-radius: 5px;;
+      box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+      padding: 5px 10px;
    }
 }
 </style>

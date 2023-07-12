@@ -7,7 +7,7 @@ const routes = [
     component: () => import(/* webpackChunkName: 'CountryList' */'@/views/CountryList.vue'),
   },
   {
-   path: '/country/:countryId(\\d+)',
+   path: '/country/:countryId',
    name: 'CountryDetails',
    component: () => import(/* webpackChunkName: 'CountryDetails' */'@/views/CountryDetails.vue'),
   },

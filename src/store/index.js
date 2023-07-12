@@ -17,11 +17,7 @@ export default createStore({
   },
   actions: {
     setCountryList({ commit }) {
-      const countryListWithId = countryList.map((country, index) => ({
-        ...country,
-        id: index + 1 // to not have an id equals to 0
-      }))
-      commit('setCountryList', countryListWithId)
+      commit('setCountryList', countryList)
     },
 
     setRegionList({ commit }) {

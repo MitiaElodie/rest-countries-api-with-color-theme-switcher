@@ -20,7 +20,7 @@ export default {
       :to="{
          name: 'CountryDetails',
          params: {
-            countryId: country.id
+            countryId: country.alpha3Code
          }
       }"
       class="country-card-list__link"
