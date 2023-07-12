@@ -14,12 +14,23 @@ export default {
 
 <template>
 <div class="country-card-list">
-   <CountryCard
+   <router-link
       v-for="(country, index) in countryList"
       :key="`countryCard${ index }`"
+      :to="{
+         name: 'CountryDetails',
+         params: {
+            countryId: country.id
+         }
+      }"
+      class="country-card-list__link"
+   >
+      <CountryCard
       :country="country"
       class="country-card-list__item"
-   />
+      />
+   </router-link>
+
 </div>
 </template>
 
@@ -29,5 +40,10 @@ export default {
    flex-wrap: wrap;
    justify-content: space-between;
    gap: 40px;
+
+   &__link {
+      text-decoration: none;
+      color: inherit;
+   }
 }
 </style>
