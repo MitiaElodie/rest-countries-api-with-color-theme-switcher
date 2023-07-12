@@ -24,7 +24,12 @@ export default {
 <template>
   <div class="app">
     <div class="app__header">
-      <h1 class="app__title">Where in the world?</h1>
+      <router-link
+        class="app__title-link"
+        :to="{ name: 'CountryList' }"
+      >
+        <h1 class="app__title">Where in the world?</h1>
+      </router-link>
       <button class="app__dark-mode-button">
         <i class="app__dark-mode-icon fa fa-moon" />
         <span class="app__dark-mode-label">Dark Mode</span>
@@ -71,6 +76,11 @@ export default {
 
   &__content {
     padding: 30px;
+  }
+
+  &__title-link {
+    text-decoration: none;
+    color: inherit;
   }
 }
 </style>
