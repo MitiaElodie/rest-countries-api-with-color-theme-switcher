@@ -47,11 +47,11 @@ export default {
             },
             {
                name: 'Currencies',
-               value: this.country.currencies[0].name,
+               value: this.joinWithComma(this.country.currencies),
             },
             {
                name: 'Languages',
-               value: this.country.languages[0].name,
+               value: this.joinWithComma(this.country.languages),
             },
          ]
       },
@@ -68,6 +68,12 @@ export default {
    methods: {
       getCountryByAlpha3Code(code) {
          return this.countryList.filter((country) => country.alpha3Code == code)[0]
+      },
+
+      joinWithComma(itemList) {
+         const localItemList = itemList || []
+
+         return localItemList.map((item) => item.name).join(', ')
       }
    }
 }
