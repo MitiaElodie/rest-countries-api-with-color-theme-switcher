@@ -28,7 +28,7 @@ export default {
       <button
          @click="toggle"
          class="filter-region__toggle-button"
-      ><span>Filter by Region</span><i :class="`fa ${ active ? 'fa-chevron-up' : 'fa-chevron-down'}`"/></button>
+      ><span>Filter by Region</span><i :class="`filter-region__chevron-icon fa ${ active ? 'fa-chevron-up' : 'fa-chevron-down'}`"/></button>
       <div
          v-if="active"
          class="filter-region__dropdown-content"
@@ -78,6 +78,10 @@ export default {
       &:hover {
          background-color: hsl(0, 0%, 98%);
       }
+   }
+
+   &__chevron-icon {
+      padding-left: 10px;
    }
 }
 </style>
