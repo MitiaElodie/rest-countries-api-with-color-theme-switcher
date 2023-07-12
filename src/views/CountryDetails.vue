@@ -57,7 +57,7 @@ export default {
       },
 
       borderCountryNames() {
-         return this.country.borders.map((border) => this.getCountryByAlpha3Code(border).name)
+         return this.country.borders?.map((border) => this.getCountryByAlpha3Code(border).name) || []
       },
    },
 
@@ -76,7 +76,10 @@ export default {
 <template>
 <div class="country-details">
    <div class="country-details__back-container">
-      <div class="country-details__back-button">
+      <div
+         class="country-details__back-button"
+         @click="$router.back()"
+      >
          <span class="country-details__back-label">Back</span>
       </div>
    </div>
