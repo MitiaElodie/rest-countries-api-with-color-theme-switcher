@@ -75,7 +75,7 @@ export default {
   }
 
   &__content {
-    padding: 30px;
+    padding: 40px 60px;
   }
 
   &__title-link {

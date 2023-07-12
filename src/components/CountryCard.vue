@@ -51,7 +51,7 @@ export default {
 
 <style lang="scss">
 .country-card {
-  width: 350px;
+  width: 290px;
   border-radius: 5px;
   overflow: hidden;
 
