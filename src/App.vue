@@ -83,4 +83,12 @@ export default {
     color: inherit;
   }
 }
+
+@media (max-width: 430px) {
+  .app {
+    &__content {
+      padding: 20px 30px;
+    }
+  }
+}
 </style>
