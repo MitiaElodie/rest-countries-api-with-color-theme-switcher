@@ -47,7 +47,7 @@ export default {
       </button>
     </div>
     <div class="app__content">
-      <router-view/>
+      <router-view :key="$route.fullPath"/>
     </div>
   </div>
 </template>

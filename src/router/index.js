@@ -10,6 +10,7 @@ const routes = [
    path: '/country/:countryId',
    name: 'CountryDetails',
    component: () => import(/* webpackChunkName: 'CountryDetails' */'@/views/CountryDetails.vue'),
+   props: true,
   },
   {
     path: '/:patchMatch(.*)*',

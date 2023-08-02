@@ -5,6 +5,13 @@ import InformationList from '@/components/InformationList.vue';
 export default {
    name: 'CountryDetails',
 
+   props: {
+      countryId: {
+         type: String,
+         required: true
+      }
+   },
+
    components: { InformationList },
 
    data() {
@@ -56,13 +63,13 @@ export default {
          ]
       },
 
-      borderCountryNames() {
-         return this.country.borders?.map((border) => this.getCountryByAlpha3Code(border).name) || []
+      borderCountryList() {
+         return this.country.borders?.map((border) => ({ name: this.getCountryByAlpha3Code(border).name, countryId: border})) || []
       },
    },
 
    created() {
-      this.country = this.getCountryByAlpha3Code(this.$route.params.countryId)
+      this.country = this.getCountryByAlpha3Code(this.countryId)
    },
 
    methods: {
@@ -109,12 +116,16 @@ export default {
          </div>
             <div class="country-details__border-list">
                <span class="country-details__border-label">Border countries:</span>
-               <template v-if="borderCountryNames.length > 0">
-                  <div
-                     v-for="(border, index) in borderCountryNames"
+               <template v-if="borderCountryList.length > 0">
+                  <router-link
+                     v-for="(border, index) in borderCountryList"
                      :key="`border-${index}`"
+                     :to="{
+                        name: 'CountryDetails',
+                        params: { countryId: border.countryId}
+                     }"
                      class="country-details__border"
-                  >{{ border }}</div>
+                  >{{ border.name }}</router-link>
                </template>
                <template v-else><span class="country-details__no-borders">None</span></template>
             </div>
@@ -163,8 +174,10 @@ export default {
    &__border {
       border-radius: 2px;
       padding: 1px 20px;
+      text-decoration: none;
 
       box-shadow: var(--button-box-shadow);
+      color: var(--text-color);
       background-color: var(--element-background-color);
    }
 
