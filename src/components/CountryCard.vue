@@ -16,7 +16,7 @@ export default {
       return [
         {
           name: 'Population',
-          value: this.country.population,
+          value: this.country.population.toLocaleString('en'),
         }, {
           name: 'Region',
           value: this.country.region,
