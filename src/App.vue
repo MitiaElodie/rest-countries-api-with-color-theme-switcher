@@ -61,6 +61,7 @@ export default {
   --element-background-color: white;
   --box-shadow: 0px 0px 5px 1px hsl(0, 0%, 85%);
   --search-text-color: hsl(0, 0%, 52%);
+  --button-box-shadow: 0px 0px 5px 1px hsl(0, 0%, 85%);
 }
 
 * {
@@ -77,6 +78,7 @@ export default {
     --element-background-color: #2b3743;
     --box-shadow: none;
     --search-text-color: white;
+    --button-box-shadow: 0px 0px 5px 1px #1d2935;
   }
   color: var(--text-color);
 

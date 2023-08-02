@@ -107,9 +107,8 @@ export default {
                :information-list="culturalInformation"
             />
          </div>
-         <div class="country-details__border-countries-container">
-            <span class="country-details__border-label">Border countries:</span>
             <div class="country-details__border-list">
+               <span class="country-details__border-label">Border countries:</span>
                <template v-if="borderCountryNames.length > 0">
                   <div
                      v-for="(border, index) in borderCountryNames"
@@ -119,7 +118,6 @@ export default {
                </template>
                <template v-else><span class="country-details__no-borders">None</span></template>
             </div>
-         </div>
       </div>
    </div>
 </div>
@@ -133,6 +131,7 @@ export default {
    &__information {
       display: flex;
       flex-wrap: wrap;
+      gap: 30px;
    }
 
    &__information {
@@ -149,22 +148,24 @@ export default {
       display: inline-block;
    }
 
+   &__border-label {
+      margin-right: 5px;
+   }
+
    &__border-list {
       display: inline-flex;
       flex-wrap: wrap;
-      margin-left: 5px;
 
       gap: 10px;
+      margin-top: 50px;
    }
 
    &__border {
       border-radius: 2px;
-      box-shadow: var(--box-shadow);
       padding: 1px 20px;
-   }
 
-   &__border-countries-container {
-      margin-top: 50px;
+      box-shadow: var(--button-box-shadow);
+      background-color: var(--element-background-color);
    }
 
    &__no-borders {
@@ -182,8 +183,9 @@ export default {
       border-radius: 5px;
       cursor: pointer;
 
-      box-shadow: var(--box-shadow);
-      background-color: white;
+      box-shadow: var(--button-box-shadow);
+      color: var(--text-color);
+      background-color: var(--element-background-color);
    }
 
    &__back-container {
