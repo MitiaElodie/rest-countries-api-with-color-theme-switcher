@@ -54,12 +54,13 @@ export default {
       border: none;
       cursor: pointer;
 
-      background-color: white;
+      color: var(--text-color);
+      background-color: var(--element-background-color);
    }
 
    &__toggle-button {
       width: 150px;
-      box-shadow: 0px 0px 5px 1px hsl(0, 0%, 85%);
+      box-shadow: var(--box-shadow);
    }
 
    &__dropdown-content {
@@ -68,8 +69,9 @@ export default {
       border-radius: 5px;
       min-width: 100%;
 
-      background-color: white;
-      box-shadow: 0px 0px 5px 1px hsl(0, 0%, 85%);
+      color: var(--text-color);
+      background-color: var(--element-background-color);
+      box-shadow: var(--box-shadow);
    }
 
    &__region {

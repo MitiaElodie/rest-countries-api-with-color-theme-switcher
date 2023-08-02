@@ -39,7 +39,7 @@ export default {
 
    color: hsl(0, 0%, 52%);
    background-color: white;
-   box-shadow: 0px 0px 5px 1px hsl(0, 0%, 85%);
+   box-shadow: var(--box-shadow);
 
    &__input {
       padding: 15px;

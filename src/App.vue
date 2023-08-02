@@ -58,7 +58,8 @@ export default {
   --text-color: hsl(200, 15%, 8%);
   --header-background-color: white;
   --app-content-background-color: hsl(0, 0%, 98%);
-  --card-background-color: white;
+  --element-background-color: white;
+  --box-shadow: 0px 0px 5px 1px hsl(0, 0%, 85%);
 }
 
 * {
@@ -73,6 +74,7 @@ export default {
     --header-background-color: #2b3743;
     --app-content-background-color: #202d36;
     --element-background-color: #2b3743;
+    --box-shadow: none;
   }
   color: var(--text-color);
 

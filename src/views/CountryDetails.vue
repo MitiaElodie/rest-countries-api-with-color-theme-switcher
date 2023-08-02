@@ -159,7 +159,7 @@ export default {
 
    &__border {
       border-radius: 2px;
-      box-shadow: 0px 0px 5px 1px hsl(0, 0%, 85%);
+      box-shadow: var(--box-shadow);
       padding: 1px 20px;
    }
 
@@ -182,7 +182,7 @@ export default {
       border-radius: 5px;
       cursor: pointer;
 
-      box-shadow: 0px 0px 5px 1px hsl(0, 0%, 85%);
+      box-shadow: var(--box-shadow);
       background-color: white;
    }
 
@@ -194,7 +194,7 @@ export default {
       display: block; // to remove the extra space at the bottom
       width: 475px;
       min-width: 250px;
-      box-shadow: 0px 0px 5px 1px hsl(0, 0%, 85%);
+      box-shadow: var(--box-shadow);
    }
 
    &__name {
