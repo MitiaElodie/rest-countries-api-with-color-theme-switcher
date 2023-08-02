@@ -60,6 +60,7 @@ export default {
   --app-content-background-color: hsl(0, 0%, 98%);
   --element-background-color: white;
   --box-shadow: 0px 0px 5px 1px hsl(0, 0%, 85%);
+  --search-text-color: hsl(0, 0%, 52%);
 }
 
 * {
@@ -75,6 +76,7 @@ export default {
     --app-content-background-color: #202d36;
     --element-background-color: #2b3743;
     --box-shadow: none;
+    --search-text-color: white;
   }
   color: var(--text-color);
 

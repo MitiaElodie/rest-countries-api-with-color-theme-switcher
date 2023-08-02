@@ -37,8 +37,8 @@ export default {
    width: 350px;
    border-radius: 5px;
 
-   color: hsl(0, 0%, 52%);
-   background-color: white;
+   color: var(--search-text-color);
+   background-color: var(--element-background-color);
    box-shadow: var(--box-shadow);
 
    &__input {
@@ -46,6 +46,9 @@ export default {
       padding-left: 0; // remove the padding left because there is already a padding from the icon
       border: none;
       width: 100%;
+       
+      color: var(--search-text-color);
+      background-color: var(--element-background-color);
 
       &:focus {
          outline: none; // to remove the border when focused
