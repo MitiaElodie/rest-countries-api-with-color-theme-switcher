@@ -72,10 +72,6 @@ export default {
 </template>
 
 <style lang="scss">
-.app__content {
-   background-color: hsl(0, 0%, 98%);
-}
-
 .country-list {
    font-size: 14px;
    &__header {

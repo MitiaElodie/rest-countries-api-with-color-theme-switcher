@@ -7,7 +7,8 @@ export default {
 
   data() {
     return {
-      countryList: countryList
+      countryList: countryList,
+      hasDarkMode: false,
     }
   },
 
@@ -16,13 +17,20 @@ export default {
   },
 
   methods: {
-    ...mapActions(['setCountryList', 'setRegionList'])
+    ...mapActions(['setCountryList', 'setRegionList']),
+
+    toggleDarkMode() {
+      this.hasDarkMode = !this.hasDarkMode
+    },
   },
 }
 </script>
 
 <template>
-  <div class="app">
+  <div
+    class="app"
+    :class="{'app--dark-mode': hasDarkMode}"
+  >
     <div class="app__header">
       <router-link
         class="app__title-link"
@@ -30,8 +38,11 @@ export default {
       >
         <h1 class="app__title">Where in the world?</h1>
       </router-link>
-      <button class="app__dark-mode-button">
-        <i class="app__dark-mode-icon fa fa-moon-o" />
+      <button
+        class="app__dark-mode-button"
+        @click="toggleDarkMode"
+      >
+        <i class="app__dark-mode-icon fa fa-moon" />
         <span class="app__dark-mode-label">Dark Mode</span>
       </button>
     </div>
@@ -43,6 +54,12 @@ export default {
 
 
 <style lang="scss">
+:root {
+  --text-color: hsl(200, 15%, 8%);
+  --header-background-color: white;
+  --app-content-background-color: hsl(0, 0%, 98%);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -50,12 +67,22 @@ export default {
 }
 
 .app {
+  &--dark-mode {
+    --text-color: white;
+    --header-background-color: #2b3743;
+    --app-content-background-color: #202d36;
+
+  }
+  color: var(--text-color);
+
   &__header {
     display: flex;
     justify-content: space-between;
-    gap: 10px;
 
+    gap: 10px;
     padding: 25px;
+
+    background-color: var(--header-background-color);
   }
 
   &__title {
@@ -64,6 +91,7 @@ export default {
 
   &__dark-mode-button {
     background-color: inherit;
+    color: inherit;
     border: none;
     cursor: pointer;
 
@@ -75,6 +103,7 @@ export default {
   }
 
   &__content {
+    background-color: var(--app-content-background-color);
     padding: 40px 60px;
   }
 
