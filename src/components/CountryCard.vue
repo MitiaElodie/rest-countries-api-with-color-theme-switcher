@@ -55,7 +55,7 @@ export default {
   border-radius: 5px;
   overflow: hidden;
 
-  background-color: white;
+  background-color: var(--element-background-color);
   box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.2);
 
   &__flag-container {
