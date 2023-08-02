@@ -82,7 +82,17 @@ export default {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-flow: row wrap;
+      gap: 15px;
       margin-bottom: 50px;
+   }
+}
+
+@media (max-width: 650px) {
+   .country-list {
+      &__search-bar {
+         width: 100%;
+      }
    }
 }
 </style>
