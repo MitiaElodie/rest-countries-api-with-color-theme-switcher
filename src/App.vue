@@ -81,6 +81,9 @@ export default {
     --button-box-shadow: 0px 0px 5px 1px #1d2935;
   }
   color: var(--text-color);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 
   &__header {
     display: flex;
@@ -112,6 +115,8 @@ export default {
   &__content {
     background-color: var(--app-content-background-color);
     padding: 40px 60px;
+    overflow: auto;
+    flex-grow: 1;
   }
 
   &__title-link {
