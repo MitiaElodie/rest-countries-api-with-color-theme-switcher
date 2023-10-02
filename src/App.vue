@@ -62,6 +62,7 @@ export default {
   --box-shadow: 0px 0px 5px 1px hsl(0, 0%, 85%);
   --search-text-color: hsl(0, 0%, 52%);
   --button-box-shadow: 0px 0px 5px 1px hsl(0, 0%, 85%);
+  --filter-region-hover-background-color: hsl(0, 0%, 98%);
 }
 
 * {
@@ -79,6 +80,7 @@ export default {
     --box-shadow: none;
     --search-text-color: white;
     --button-box-shadow: 0px 0px 5px 1px #1d2935;
+    --filter-region-hover-background-color: #202d36;
   }
   color: var(--text-color);
   height: 100vh;

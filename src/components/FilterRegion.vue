@@ -80,7 +80,7 @@ export default {
       width: 100%;
 
       &:hover {
-         background-color: hsl(0, 0%, 98%);
+         background-color: var(--filter-region-hover-background-color);
       }
    }
 
