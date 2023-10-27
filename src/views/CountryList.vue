@@ -53,7 +53,7 @@ export default {
 </script>
 
 <template>
-   <div class="country-list">
+   <section class="country-list">
       <div class="country-list__header">
          <SearchBar   
             class="country-list__search-bar"
@@ -68,7 +68,7 @@ export default {
          class="country-list__list"
          :country-list="localCountryList"
       />
-   </div>
+   </section>
 </template>
 
 <style lang="scss">

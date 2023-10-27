@@ -46,9 +46,9 @@ export default {
         <span class="app__dark-mode-label">Dark Mode</span>
       </button>
     </header>
-    <section class="app__content">
+    <main class="app__content">
       <router-view :key="$route.fullPath"/>
-    </section>
+    </main>
   </div>
 </template>
 

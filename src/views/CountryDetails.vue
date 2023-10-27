@@ -87,7 +87,7 @@ export default {
 </script>
 
 <template>
-<div class="country-details">
+<section class="country-details">
    <div class="country-details__back-container">
       <button
          class="country-details__back-button"
@@ -131,7 +131,7 @@ export default {
             </div>
       </div>
    </div>
-</div>
+</section>
 </template>
 
 <style lang="scss">
