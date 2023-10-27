@@ -92,13 +92,13 @@ export default {
     justify-content: space-between;
 
     gap: 10px;
-    padding: 25px;
+    padding: 25px 60px;
 
     background-color: var(--header-background-color);
   }
 
   &__title {
-    font-size: 1em;
+    font-size: 1.5em;
   }
 
   &__dark-mode-button {
