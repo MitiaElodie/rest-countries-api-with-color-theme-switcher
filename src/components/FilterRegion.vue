@@ -34,6 +34,10 @@ export default {
          class="filter-region__dropdown-content"
       >
       <button
+         class="filter-region__region"
+         @click="$emit('filter-change', '')"
+      >All regions</button>
+      <button
          v-for="region in regionList"
          :key="region"
          class="filter-region__region"
