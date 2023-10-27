@@ -103,7 +103,7 @@ export default {
             :src="country.flags.png"
          />
       <div class="country-details__information-container">
-         <h3 class="country-details__name">{{ country.name }}</h3>
+         <h2 class="country-details__name">{{ country.name }}</h2>
          <div class="country-details__information">
             <InformationList
                class="country-details__geographical-information"
