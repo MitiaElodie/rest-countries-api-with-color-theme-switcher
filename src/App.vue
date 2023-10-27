@@ -31,7 +31,7 @@ export default {
     class="app"
     :class="{'app--dark-mode': hasDarkMode}"
   >
-    <div class="app__header">
+    <header class="app__header">
       <router-link
         class="app__title-link"
         :to="{ name: 'CountryList' }"
@@ -45,10 +45,10 @@ export default {
         <i class="app__dark-mode-icon fa fa-moon" />
         <span class="app__dark-mode-label">Dark Mode</span>
       </button>
-    </div>
-    <div class="app__content">
+    </header>
+    <section class="app__content">
       <router-view :key="$route.fullPath"/>
-    </div>
+    </section>
   </div>
 </template>
 
