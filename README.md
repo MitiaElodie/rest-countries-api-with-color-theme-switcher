@@ -41,7 +41,7 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- [Vue.js](https://vuejs.org/) - React framework
+- [Vue.js](https://vuejs.org/) - JS framework
 
 
 ## Author
